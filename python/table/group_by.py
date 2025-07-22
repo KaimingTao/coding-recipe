@@ -19,4 +19,4 @@ def group_by(records, group_key_list):
 
         group_result[primary_key].append(r)
 
-    return group_result
+    return group_result.items()
