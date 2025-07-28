@@ -1,0 +1,2 @@
+- indent = 4
+- unicode support by default
