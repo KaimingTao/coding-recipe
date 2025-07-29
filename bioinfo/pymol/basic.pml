@@ -62,3 +62,5 @@ set_view()
 get_view()
 
 
+save xxx.pdb
+help select
