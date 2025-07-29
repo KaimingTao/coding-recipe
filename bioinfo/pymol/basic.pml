@@ -53,14 +53,38 @@ hide sticks, xxx
 
 ## save file
 
+set antialias, 1
 set ray_opaque_background, on
 bg white
 ray 1000, 1000
 png xxx.png, dpi=300
+png {picture_name}, dpi=300
+
+## Camera angle
 
 set_view()
 get_view()
+orient
+rotate y, 180
 
+## Labels
+
+set label_size, 12
+set depth_cue, 0
+
+label xxx, "label name"
+set label_position, (0, 150, 0)
+
+## Residue
+
+stored.contact_residues = []
+iterate xxx, resv, stored.contact_residues.append(resv)
+stored.contact_residues = sorted(list(set(stored.contact_residues)))
+stored.contact_residues = '+'.join([str(i) for i in stored.contact_residues])
+
+
+## MISC
 
 save xxx.pdb
 help select
+cmd.select
