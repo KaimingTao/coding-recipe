@@ -10,6 +10,6 @@ def aa_pos_to_na_pos(aa_pos):
 def na_pos_to_aa_pos(na_pos):
 
     na_ofst = na_pos - 1
-    aa_ofst = na_ofst % 3
+    aa_ofst = na_ofst // 3
 
     return aa_ofst + 1
