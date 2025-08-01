@@ -12,6 +12,7 @@ def run_query(db_file_path, sql_query):
 
     table = []
     for row in cursor.fetchall():
+        # Convert to dict
         rec = {}
         for key in row.keys():
             rec[key] = row[key]
